@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: co.travelful.microservices
+---
+testFramework: spock
+sourceLanguage: groovy
