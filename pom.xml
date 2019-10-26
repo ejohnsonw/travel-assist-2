@@ -14,6 +14,13 @@
       <id>jcenter.bintray.com</id>
       <url>https://jcenter.bintray.com</url>
     </repository>
+
+    <repository>
+      <id>project.local</id>
+      <name>project</name>
+      <url>file://${project.basedir}/repo</url>
+    </repository>
+
   </repositories>
   <dependencyManagement>
     <dependencies>
@@ -53,6 +60,11 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>io.micronaut.configuration</groupId>
+      <artifactId>micronaut-kafka</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-http-server-netty</artifactId>
       <scope>compile</scope>
@@ -69,8 +81,9 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.12</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -78,6 +91,24 @@
       <artifactId>tomcat-jdbc</artifactId>
       <scope>runtime</scope>
     </dependency>
+
+
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-json</artifactId>
+      <version>2.5.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.6</version>
+    </dependency>
+
+
+
     <dependency>
       <groupId>org.spockframework</groupId>
       <artifactId>spock-core</artifactId>
